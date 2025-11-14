@@ -1,0 +1,98 @@
+location.css
+
+body, h2, p, input, button {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+body {
+  background: #f6f9f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  width: 350px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  font-size: 32px;
+  background: #e7f9e9;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 12px;
+  background: #2ecc71;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.primary-btn:hover {
+  background: #27ae60;
+}
+
+.divider {
+  margin: 15px 0;
+  font-size: 12px;
+  color: #999;
+}
+
+.secondary-btn {
+  width: 100%;
+  padding: 12px;
+  background: #eef6ef;
+  border: none;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.secondary-btn:hover {
+  background: #e1f0e3;
+}
