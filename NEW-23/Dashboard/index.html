@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard • Smart Agriculture</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="logo">🌱 Dashboard</div>
+      <div class="nav-actions">
+        <a class="btn ghost" href="../Landing%20Page/index.html">Home</a>
+        <a class="btn ghost" href="../learn_more/index1.html">Learn</a>
+        <button id="changeLocation" class="btn subtle">Change Location</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="locationBanner" class="banner" hidden></div>
+
+    <section>
+      <h2>Weather Insights</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="label">Rainfall</div>
+          <div class="value" id="rainfall">—</div>
+          <div class="meta">This month</div>
+        </div>
+        <div class="card warn">
+          <div class="label">Temperature</div>
+          <div class="value" id="temperature">—</div>
+          <div class="meta">Average</div>
+        </div>
+        <div class="card ok">
+          <div class="label">Humidity</div>
+          <div class="value" id="humidity">—</div>
+          <div class="meta">Current</div>
+        </div>
+        <div class="card info">
+          <div class="label">Wind Speed</div>
+          <div class="value" id="wind">—</div>
+          <div class="meta">Average</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <h3>Rainfall Trend</h3>
+        <span class="sub">Last 6 months rainfall data</span>
+      </div>
+      <canvas id="rainTrend" height="110"></canvas>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <h3>Future Predictions</h3>
+        <span class="sub">AI-powered rainfall forecast for next 6 months</span>
+      </div>
+      <canvas id="rainPredict" height="110"></canvas>
+    </section>
+
+    <section>
+      <h2>Soil Analysis</h2>
+      <div class="soil-top">
+        <div class="soil-card">
+          <div class="soil-title">pH Level</div>
+          <div class="soil-value" id="soil-ph">—</div>
+          <div class="soil-hint" id="soil-ph-hint"></div>
+        </div>
+        <div class="soil-card ok">
+          <div class="soil-title">Organic Carbon</div>
+          <div class="soil-value" id="soil-oc">—</div>
+          <div class="soil-hint">Medium level - Can be improved</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <h3>Nutrient Levels (NPK)</h3>
+          <span class="sub">Nitrogen, Phosphorus, and Potassium content</span>
+        </div>
+        <div class="npk-bars">
+          <div class="npk-item"><div class="npk-label">Nitrogen (N)</div><div class="npk-bar"><div class="npk-fill n" id="npk-n" style="width:0%"></div></div><div class="npk-value" id="npk-n-val">—</div></div>
+          <div class="npk-item"><div class="npk-label">Phosphorus (P)</div><div class="npk-bar"><div class="npk-fill p" id="npk-p" style="width:0%"></div></div><div class="npk-value" id="npk-p-val">—</div></div>
+          <div class="npk-item"><div class="npk-label">Potassium (K)</div><div class="npk-bar"><div class="npk-fill k" id="npk-k" style="width:0%"></div></div><div class="npk-value" id="npk-k-val">—</div></div>
+        </div>
+      </div>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h3>pH Level Distribution</h3>
+          <span class="sub">Soil pH analysis over time</span>
+        </div>
+        <canvas id="phChart" height="110"></canvas>
+      </section>
+    </section>
+
+    <section>
+      <div class="panel-header" style="margin-top:10px;">
+        <h3>My Crops</h3>
+        <button class="btn primary" id="addCrop">+ Add Crop</button>
+      </div>
+      <div id="cropsList" class="crops"></div>
+    </section>
+
+    <section>
+      <div class="panel-footer">
+        <div>
+          <h3>Ready to see crop recommendations?</h3>
+          <p>Based on your weather and soil data, we have personalized suggestions.</p>
+        </div>
+        <a class="btn primary" href="../learn_more/index1.html">View Recommendations</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

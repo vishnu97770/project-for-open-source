@@ -1,0 +1,36 @@
+/* Tech stack box */
+.tech-box{background:linear-gradient(180deg, rgba(247,253,250,1), rgba(255,255,255,1));border-radius:12px;padding:26px;border:1px solid rgba(47,184,74,0.06);max-width:900px;margin:28px auto;text-align:center}
+.pill{display:inline-block;
+    padding:8px 12px;
+    border-radius:999px
+    ;border:1px solid rgba(11,59,43,0.06);
+    margin:6px;font-weight:700;
+    background:transparent;
+    color:var(--text)}
+
+/* Final CTA */
+.final-cta{text-align:center;
+    padding:36px 20px 80px}
+.final-cta h3{font-size:24px;
+    margin-bottom:12px;
+    color:#0f3b2b}
+.final-cta p{color:var(--muted);
+    margin-bottom:18px;
+    max-width:760px;
+    margin-left:auto;
+    margin-right:auto}
+
+/* Footer */
+.site-footer{padding:28px;
+    text-align:center;
+    color:var(--muted);
+    font-size:14px;
+    border-top:1px solid rgba(0,0,0,0.02)}
+
+/* Responsive */
+@media (max-width:900px){
+  .how-grid{flex-direction:column}
+  .features-grid{grid-template-columns:1fr}
+  .about-hero{padding-top:72px}
+  .card{min-height:unset}
+}
