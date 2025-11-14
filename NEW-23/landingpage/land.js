@@ -1,4 +1,4 @@
-script.js
+
 // Simple JS for demo CTA interactions
 document.querySelectorAll('.btn.primary').forEach(btn=>{
   btn.addEventListener('click', ()=>{
